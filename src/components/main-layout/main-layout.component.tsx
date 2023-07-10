@@ -10,6 +10,7 @@ import {
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { logoImg } from 'assets';
 import { SectionIdEnum } from 'types';
+import { Footer } from 'components/footer/footer.component';
 import { Navigation } from './navigation/navigation.component';
 
 export type MainLayoutProps = {
@@ -39,6 +40,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
         <Toolbar />
         {children}
       </Box>
+      <Footer />
     </Box>
   );
 };
