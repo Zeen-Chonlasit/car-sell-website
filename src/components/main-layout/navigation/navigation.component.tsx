@@ -1,17 +1,7 @@
 import React, { useState } from 'react';
 import { SectionIdEnum } from 'types';
 import { Close, Menu } from '@mui/icons-material';
-import {
-  Box,
-  Button,
-  IconButton,
-  Hidden,
-  Dialog,
-  AppBar,
-  Toolbar,
-  Typography,
-  Slide,
-} from '@mui/material';
+import { Box, Button, IconButton, Hidden, Dialog, AppBar, Toolbar, Typography, Slide } from '@mui/material';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { TransitionProps } from '@mui/material/transitions';
 
@@ -57,7 +47,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isSmall }) => {
 
   const mappedItems = navigationItems.map(({ to, text }) => {
     return (
-      <AnchorLink key={to} href={`#${to}`} offset={isSmall ? '56px' : '64px'} className='all_unset'>
+      <AnchorLink key={to} href={`#${to}`} offset={isSmall ? '56px' : '64px'} className="all_unset">
         <Button color="inherit" size="large" fullWidth={isSmall} onClick={onCloseHandler}>
           {text}
         </Button>
@@ -68,7 +58,7 @@ export const Navigation: React.FC<NavigationProps> = ({ isSmall }) => {
   return (
     <>
       <Hidden smDown>
-        <Box display='flex' gap={2}>
+        <Box display="flex" gap={2}>
           {mappedItems}
         </Box>
       </Hidden>

@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  AppBar,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
+import { Box, AppBar, Toolbar, Typography, useMediaQuery, useTheme } from '@mui/material';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { logoImg } from 'assets';
 import { SectionIdEnum } from 'types';
@@ -23,13 +16,15 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <Box height="100vh">
-      <AppBar position='fixed' sx={{ background: 'black' }}>
+      <AppBar position="fixed" sx={{ background: 'black' }}>
         <Toolbar>
           <Box flexGrow={1}>
-            <AnchorLink href={`#${SectionIdEnum.intro}`} offset={isSmall ? '56px' : '64px'} className='all_unset'>
+            <AnchorLink href={`#${SectionIdEnum.intro}`} offset={isSmall ? '56px' : '64px'} className="all_unset">
               <Box display="flex" alignItems="center" gap={0.5} sx={{ cursor: 'pointer' }}>
                 <img width="54px" height="54px" src={logoImg} alt="logo" />
-                <Typography variant='h5' sx={{ width: 'fit-content' }}>CodeFocus</Typography>
+                <Typography variant="h5" sx={{ width: 'fit-content' }}>
+                  CodeFocus
+                </Typography>
               </Box>
             </AnchorLink>
           </Box>
